@@ -1,5 +1,5 @@
 """Emma API Wrapper for Python"""
-from enumerations import Report as r
+from emma.enumerations import Report as r
 
 
 def get_report(account, report, id=None, params=None):
@@ -58,3 +58,4 @@ def get_report(account, report, id=None, params=None):
     return (account.adapter.paginated_get(path, params)
             if needs_pagination
             else account.adapter.get(path, params))
+
